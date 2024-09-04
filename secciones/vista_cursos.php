@@ -1,8 +1,11 @@
 <?php include('../template/cabecera.php'); ?>
 
-control de cursos
+            <div class="row">
+                <div class="col-12">
+                    <br/> 
+                    <div class="row">
 
-<div class="col-md-5">
+<div class="col-5">
 
     <form action="" method="post">
 
@@ -26,9 +29,9 @@ control de cursos
                 </div>
 
                 <div class="btn-group" role="group" aria-label="">
-                    <button type="button" class="btn btn-primary">Agregar</button>
-                    <button type="button" class="btn btn-primary">Editar</button>
-                    <button type="button" class="btn btn-primary">Borrar</button>
+                    <button type="button" class="btn btn-success">Agregar</button>
+                    <button type="button" class="btn btn-warning">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
                 </div>
 
             </div>
@@ -36,10 +39,28 @@ control de cursos
     </form>
 </div>
 
-<div clas="col-md-7">
+<div class="col-7">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Sitio web con PHP</td>
+                    <td>Seleccionar</td>
+                </tr>
 
+            </tbody>
+        </table>
+    
 </div>
 
-
+</div>
+    </div>
 
 <?php include('../template/pie.php'); ?>
