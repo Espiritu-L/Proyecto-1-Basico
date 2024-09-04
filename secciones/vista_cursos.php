@@ -1,4 +1,6 @@
 <?php include('../template/cabecera.php'); ?>
+<?php include('../secciones/cursos.php'); ?>
+
 
             <div class="row">
                 <div class="col-12">
@@ -29,9 +31,9 @@
                 </div>
 
                 <div class="btn-group" role="group" aria-label="">
-                    <button type="button" class="btn btn-success">Agregar</button>
-                    <button type="button" class="btn btn-warning">Editar</button>
-                    <button type="button" class="btn btn-danger">Borrar</button>
+                    <button type="submit" name="accion" value="agregar" class="btn btn-success">Agregar</button>
+                    <button type="submit" name="accion" value="editar" class="btn btn-warning">Editar</button>
+                    <button type="submit" name="accion" value="borrar" class="btn btn-danger">Borrar</button>
                 </div>
 
             </div>
@@ -49,11 +51,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Sitio web con PHP</td>
-                    <td>Seleccionar</td>
-                </tr>
+                <?php foreach($listaCursos as $curso){?>
+                    <tr>
+                        <td> <?php echo $curso['id']; ?> </td>
+                        <td> <?php echo $curso['nombre_curso']; ?> </td>
+                        <td>Seleccionar</td>
+                    </tr>
+                <?php }?>
 
             </tbody>
         </table>
